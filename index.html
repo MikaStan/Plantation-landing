@@ -1,0 +1,229 @@
+<!-- Plantation HTMLacademy -->
+<!-- https://pixso.net/app/editor/gW1IfegRasN6_acm0dApsg  -->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Плантация HTMLacademy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header">
+
+                <div class="header__logo">
+                    <h4>Плантация</h4>
+                </div>
+    
+                <nav class="header__nav">
+                    <a class="header__link" href="catalog">Каталог</a>
+                    <a class="header__link" href="actions">Акции</a>
+                    <a class="header__link" href="#contacts">Контакты</a>
+                </nav>
+                
+                <div class="header__bag">
+                    <a class="header__bag-link" href="#"><img src="images/bag.svg" alt="Корзина"></a>
+                </div>
+            
+            </div>
+
+        </div>
+        
+    </header>
+
+    <main class="container">
+
+        <!-- Cover  -->
+        <section class="cover">
+            <div class="cover__content">
+                <h1 class="cover__head">Магазин комнатных <span class="break__text">растений Плантация</span></h1>
+                <p class="cover__text">Всегда свежие растения и цветы из лучших питомников Европы. Наши цветы приносят
+                    радость своим владельцам каждый день.</p>
+                <div class="cover__buttons">
+                    <a class="cover__primary" href="catalog">Каталог</a>
+                    <a class="cover__secondary" href="#contacts">Связаться</a>
+                </div>
+            </div>
+
+            <div class="cover__photo">
+                <picture>
+                    <source media="(max-width: 380px)" srcset="images/illustration-380.jpg">
+                    <source media="(max-width: 540px)" srcset="images/illustration-380.jpg">
+                    <source media="(max-width: 768px)" srcset="images/illustration-380.jpg">
+                    <source media="(max-width: 912px)" srcset="images/illustration-912.jpg">
+                    <source media="(max-width: 1024px)" srcset="images/illustration-1024.jpg">
+                    <img src="images/illustration.webp" alt="Plantation Cover">
+                </picture>
+            </div>
+        </section>
+
+        <!-- Catalog -->
+        <section class="catalog">
+            <h2 class="catalog__head">Каталог</h2>
+
+            <div class="catalog__cards">
+                <div class="catalog__card">
+                    <img class="catalog__image" src="images/card 1.png" alt="Гималайамикс">
+                    <div class="catalog__content">
+                        <h4 class="catalog__caption">Гималайамикс</h4>
+                        <p class="catalog__text">Область естественного распространения:<span class="break__text"></span> Африка и Америка</p>
+                        <h5 class="catalog__price">2 800 руб</h5>
+                        <a class="catalog__link" href="catalog/gimalayamix.html">Подробнее</a>
+                    </div>
+                </div>
+
+                <div class="catalog__card">
+                    <img class="catalog__image" src="images/card 2.png" alt="Монстера">
+                    <div class="catalog__content">
+                        <h4 class="catalog__caption">Монстера</h4>
+                        <p class="catalog__text">Область естественного распространения:<span class="break__text"></span> Америка и Азия</p>
+                        <h5 class="catalog__price">3 200 руб</h5>
+                        <a class="catalog__link" href="catalog/monstera.html">Подробнее</a>
+                    </div>
+                </div>
+
+                <div class="catalog__card">
+                    <img class="catalog__image" src="images/card 3.png" alt="Сансевиерия">
+                    <div class="catalog__content">
+                        <h4 class="catalog__caption">Сансевиерия</h4>
+                        <p class="catalog__text">Область естественного распространения:<span class="break__text"></span> Африка и Азия</p>
+                        <h5 class="catalog__price">1 800 руб</h5>
+                        <a class="catalog__link" href="catalog/sansevieria.html">Подробнее</a>
+                    </div>
+                </div>
+
+                <div class="catalog__card">
+                    <img class="catalog__image" src="images/card 4.png" alt="Трифасциата">
+                    <div class="catalog__content">
+                        <h4 class="catalog__caption">Трифасциата</h4>
+                        <p class="catalog__text">Область естественного распространения:<span class="break__text"></span> Африка и Азия</p>
+                        <h5 class="catalog__price">1 600 руб</h5>
+                        <a class="catalog__link" href="catalog/trifasciata.html">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Actions -->
+        <section class="actions">
+            <h2 class="actions__head">Акции</h2>
+
+            <div class="actions__cards">
+                <div class="action__card" id="action1">
+                    <a href="actions/gift.html">
+                        <div class="action__content">
+                            <h4 class="action__caption">2+1=3</h4>
+                            <p class="action__text">При покупке двух комнатных <span class="break__text">растений — третье в подарок!</span></p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="action__card" id="action2">
+                    <a href="actions/cachepot.html">
+                        <div class="action__content">
+                            <h4 class="action__caption">Кашпо <span class="break__text">в подарок</span></h4>
+                            <p class="action__text">При покупке от 3000 <span class="break__text"></span>кашпо в подарок!</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="action__card" id="action3">
+                    <a href="actions/transplant.html">
+                        <div class="action__content">
+                            <h4 class="action__caption">Бесплатная <span class="break__text">пересадка</span></h4>
+                            <p class="action__text">При покупке горшка или кашпо <span class="break__text">пересадка растения в подарок!</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <!-- Contacts & Feedback -->
+        <div class="container footer">
+            <h2 class="footer__head"><a id="contacts"></a>Контакты</h2>
+
+            <div class="footer__columns">
+                <div class="footer__contacts">
+                    <div class="footer__address">
+                        <h4>Адрес магазина</h4>
+                        <p>Россия, г. Санкт-Петербург,<br> наб. Pеки Карповки, 5 корпус П</p>
+                    </div>
+                    <div class="footer__phone">
+                        <h4>Телефон</h4>
+                        <p>+7-999-999-99-99</p>
+                    </div>
+                    <div class="footer__email">
+                        <h4>E-mail</h4>
+                        <p>contact@plantacia.ru</p>
+                    </div>
+                    <div class="footer__social">
+                        <h4>Соцсети</h4>
+                        <div class="footer__social_icons">
+                            <a href="#"><img src="images/telegram.svg" alt="telegram" target="_blank"></a>
+                            <a href="https://youtube.com"><img src="images/youtube.svg" alt="youtube"
+                                    target="_blank"></a>
+                            <a href="https://vk.com/mikastan"><img src="images/vk.svg" alt="vk" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3993.621817401018!2d30.317862969157705!3d59.96846004930196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0KDQvtGB0YHQuNGPLCDQsy4g0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINC90LDQsS4gUNC10LrQuCDQmtCw0YDQv9C-0LLQutC4LCA1INC60L7RgNC_0YPRgSDQnw!5e0!3m2!1sru!2sru!4v1737200882726!5m2!1sru!2sru"
+                        width="460" height="352" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <img src="images/map.png" alt="Карта" id="map">
+                    <!-- В случае если Google карта не загрузится, показать взамен картинку - но пока я это не доработал! -->
+                </div>
+
+                <div class="footer__feedback">
+                    <h4 class="footer__feedback-head">Обратная связь</h4>
+                    <form class="footer__feedback-form" action="/feedback" method="get">
+                        <input placeholder="Ваше имя" name="name">
+                        <input type="email" placeholder="Ваш email" name="email" required>
+                        <textarea name="question" placeholder="Ваш вопрос"></textarea>
+                        <input type="submit" value="Отправить">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Мобильное меню, на экранах 540 и меньше -->
+    <div class="container">
+        <div class="footer__mobile">
+            <div class="footer__mobile_item">
+                <p><a class="footer__link-mobile" href="catalog/"><img src="/images/catalog-mobile.svg" alt="Каталог"><br>Каталог</a></p>
+            </div>
+            <div class="footer__mobile_item">
+                <p><a class="footer__link-mobile" href="actions/"><img src="/images/actions-mobile.svg" alt=""><br>Акции</a></p>
+            </div>
+            <div class="footer__mobile_item">
+                <p><a class="footer__link-mobile" href="#contacts"><img src="/images/contacts-mobile.svg" alt=""><br>Контакты</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Кнопка Вверх, внизу страницы  -->
+    <a href="#top">
+        <div class="scroll-to-top">
+            <img src="images/eco-energy.svg" alt="К началу страницы" title="К началу страницы">
+        </div>
+    </a>
+    <script src="/button-to-top.js"></script>
+
+</body>
+
+</html>
