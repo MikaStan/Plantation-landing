@@ -641,15 +641,3 @@ input[type="submit"] {
   }
   }
   
-  /* Outline для технических целей */
-  main, 
-  .header,
-  .footer__mobile,
-  .cover, 
-  .catalog, 
-  .actions, 
-  .footer, 
-  .actions__cards,
-  .action__card {
-    /* outline: 1px dashed var(--gray-40); */
-  }
