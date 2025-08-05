@@ -1,0 +1,248 @@
+/* General */
+:root {
+    box-sizing: border-box;
+
+    --gray-10: #fdfdfd;
+    --gray-15: #efefef;
+    --gray-20: #a8a8a8;
+    --gray-30: #707070;
+    --gray-40: #373737;
+    --green-20: #258640;
+    --green-30: #1e6b33;
+  }
+  
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
+  body {
+      margin: 0;
+      font-family: 'Ubuntu', sans-serif;
+    }
+  
+  a {
+    text-decoration: none;
+  }
+
+  main {
+    background: var(--gray-10);
+  }
+
+/* Container */
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto; 
+}
+
+/* Text */
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+font-size: 40px;
+}
+
+h4 {
+  font-size: 24px;
+  }
+
+h5 {
+    font-size: 20px;
+    }
+
+h1, h2, h4, h5 {
+  font-weight: 700;
+  color: var(--gray-40);
+}
+
+.action__caption {
+  color: var(--green-20);
+}
+
+p {
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--gray-30);
+  }
+
+  .action p {
+    color: var(--gray-40);
+  }
+
+/* Header */
+.header {
+  height: 80px;
+  background: var(--gray-15);
+  box-shadow: 0px 8px 18px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  /* Для шапки предлагался цвет Gray-10, у фона main такой же цвет 
+  - они сливаются, даже тень шапки не помогала. Пришлось подобрать для шапки другой цвет. */
+}
+
+.header__logo {
+  text-align: center;
+  /* margin: 26px 0 26px; */
+  margin-left: 140px;
+  margin-right: 300px;
+}
+
+.header__logo h4 {
+  color: var(--green-20);
+}
+
+.header__nav {
+  display: flex;
+  list-style: none; /* удаляем дефолтные маркеры списка */
+  padding: 0; /*обнуляем дефолтные значения списка */
+  margin: 0;  /*обнуляем дефолтные значения списка */
+  gap: 48px;
+  margin-right: 382px;
+}
+
+.header__link {
+  color: var(--gray-40);
+  font-size: 18px;
+}
+
+.header__bag {
+  margin-right: 140px;
+}
+
+/* Footer  */
+.footer {
+    /* height: 616px; */
+    background: var(--gray-40);
+    padding-top: 72px;
+    padding-bottom: 100px;
+  }
+  
+  .footer h2 {
+    text-align: left;
+    padding: 0;
+    margin: 0 0 48px 140px;
+   }
+  
+  .footer h2 a, .footer__icons a {
+    padding: 0;
+  }
+  
+  .footer__columns {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0 auto;
+    /* margin: 0 140px 96px 140px; */
+  }
+  
+  .footer__contacts {
+    display: flex;
+    flex-direction: column;
+    max-width: 267px;
+    gap: 24px;
+  /* margin: 48px 1033px 0 140px; */
+  }
+  
+  .footer h2, h4 {
+    color: var(--gray-10);
+  }
+  
+  .footer h4, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer h4 {
+    padding-bottom: 8px;
+  }
+  
+  .footer__map {
+    width: 460px;
+    height: 352px;
+  }
+  
+  .footer__map iframe {
+    border-radius: 4px;
+  }
+  
+  .footer__feedback {
+    width: 360px;
+    height: 352px;
+    /* outline: 1px dashed #fff; */
+    }
+  
+  .footer__feedback h4 {
+    color: var(--gray-10);
+    margin-bottom: 32px;
+  }
+  
+  form {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+  gap: 26px;
+  }
+  
+  input, textarea {
+    padding: 12px 18px;
+    background: var(--gray-40);
+    color: var(--gray-20);
+    font-size: 18px;
+    border: 1px solid var(--gray-30);
+    border-radius: 4px; 
+  }
+  
+  textarea {
+    max-height: 70px;
+  }
+  
+  input[type="submit"] {
+    width: 132px;
+    height: 45px;
+    border-radius: 4px;
+    border: none;
+    background: var(--green-20);
+    color: var(--gray-10);
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Кнопка Вверх, внизу страницы */
+  .scroll-to-top {
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 99;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .scroll-to-top:hover {
+    transform: scale(1.1);
+  }
+  @media (max-width: 767px) {
+    .scroll-to-top {
+      right: 5px;
+    }
+  }
+  .scroll-to-top svg {
+    width: 60px;
+    height: 60px;
+    fill: var(--blue-20);
+  }
+  @media (max-width: 767px) {
+    .scroll-to-top svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
+    /* Outline для технических целей */
+    .cover, .catalog, .actions, .footer {
+      outline: 1px dashed var(--gray-40);
+    }
+  

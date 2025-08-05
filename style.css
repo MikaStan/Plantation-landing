@@ -1,0 +1,655 @@
+/* Plantation HTMLacademy */
+/* https://pixso.net/app/editor/gW1IfegRasN6_acm0dApsg */
+
+/* General */
+:root {
+    box-sizing: border-box;
+
+    --gray-10:  #fdfdfd;
+    --gray-15:  #efefef;
+    --gray-20:  #a8a8a8;
+    --gray-30:  #707070;
+    --gray-40:  #373737;
+    --green-10: #519E66;
+    --green-20: #258640;
+    --green-30: #1e6b33;
+    --red-10:   #FF7373;
+  }
+  
+    *, *::before, *::after {
+      box-sizing: inherit;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  /* Container */
+.container {
+  max-width: 1440px;
+  width: 100%; 
+  margin-inline: auto; 
+}
+
+/* Text */
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 32px;
+  /* H3 use for mobile only! */
+}
+h4 {
+  font-size: 24px;
+}
+h5 {
+  font-size: 20px;
+}
+h1, h2, h4, h5 {
+  font-weight: 700;
+  color: var(--gray-40);
+}
+p {
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--gray-30);
+}
+.action__caption {
+  color: var(--green-20);
+}
+.action__text {
+  color: var(--gray-40);
+}
+.break__text {
+  display: block;  /* перенос текста на новую строку, с помощью span с данным классом */
+}
+
+/* Margin of desktop sections */
+.header {
+  margin-top: 10px;
+}
+.footer {
+  margin-bottom: 10px;
+}
+
+/* Header */
+.header,
+.footer__mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 7.3%;  /* 140px; */
+  border-radius: 4px;
+  background: var(--gray-15);
+    /* Для шапки предлагался фон Gray-10, у фона main такой же цвет 
+  - они сливаются, даже тень шапки не помогала. Пришлось подобрать для шапки другой цвет. */
+}
+
+.footer__mobile {
+  display: none;  /* скрываем нижнее фиксированное меню на десктопе */
+}
+
+.header__logo h4 {
+  color: var(--green-20);
+}
+
+.header__nav {
+  display: flex;
+  gap: 48px;
+}
+
+.header__link,
+.footer__link-mobile {
+  color: var(--gray-40);
+}
+
+.header__link {
+  font-size: 18px;
+}
+
+.footer__link-mobile {
+  font-size: 14px;
+}
+
+/* Cover */
+.cover {
+  display: flex;
+  gap: 68px;
+  margin: 108px 0 200px 140px;
+  position: relative;
+}
+
+.cover__photo {
+  position: absolute;
+  margin-top: -86px;
+  left: 564px;
+}
+
+.cover__head {
+  max-width: 500px;
+  margin-bottom: 24px;
+}
+
+.cover__text {
+  max-width: 428px;
+  margin-bottom: 42px;
+  padding: 0;
+}
+
+.cover__buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.cover__primary, .catalog__link {
+  border: none;
+  background: var(--green-20);
+  color: var(--gray-10);
+  }
+
+.cover__secondary {
+  width: 126px;
+  border: 1px solid var(--green-20);
+  background: var(--gray-10);
+  color: var(--green-20);
+  }
+
+.cover__primary, .cover__secondary, .catalog__link {
+  width: 138px;
+  height: 45px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Catalog */
+.catalog, 
+.actions {
+  margin: 0 auto 120px;
+}
+
+.catalog__card, .action__card {
+  border-radius: 4px;
+  box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.07);
+}
+
+.catalog__head {
+  margin: 0;
+  margin-left: 140px;
+}
+
+.catalog__cards {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 40px;
+  justify-content: center;
+  margin: 48px 0 0;
+}
+
+.catalog__card {
+  max-width: 260px;
+  min-height: 510px;
+  border-radius: 4px;
+}
+
+.catalog__content {
+  padding-left: 14px;
+}
+
+.catalog__caption {
+  color: var(--gray-40);
+  text-align: left;
+  margin: 8px 0 4px;
+}
+
+.catalog__text {
+  margin-bottom: 10px;
+}
+
+.catalog__price {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.catalog__link {
+  display: block;
+  padding-bottom: 28px;
+}
+
+/* Actions */
+.actions {
+  width: 80%;
+}
+
+.actions__head {
+  padding: 0;
+}
+
+.actions__cards {
+  display: grid;
+  grid-template-areas: 
+  "gift cachepot"
+  "gift transplant";
+  grid-template-columns: repeat(2, 560px);
+  gap: 32px;
+  margin-top: 48px;
+  padding-bottom: 48px;
+  }
+
+.action__card {
+  background: linear-gradient(270.00deg, rgba(255, 255, 255, 0.85) 43.75%,rgba(255, 255, 255, 0) 100%);
+}
+
+#action1 {
+  grid-area: gift;
+  height: 500px;
+  background: url(images/action1.png);
+  padding: 390px 276px 24px 24px;
+}
+#action2 {
+  grid-area: cachepot;
+  height: 230px;
+  background: url(images/action2.png);
+  padding: 92px 346px 24px 24px;
+  }
+#action3 {
+  grid-area: transplant;
+  height: 230px;
+  background: url(images/action3.png);
+  padding: 92px 264px 24px 24px;
+  }
+
+.action__caption, .action__text {
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+
+/* Footer  */
+.footer {
+  background: var(--gray-40);
+  padding: 72px 0 100px;
+  }
+
+.footer__head {
+  text-align: left;
+  padding: 0;
+  margin: 0 0 48px 140px;
+}
+
+.footer__columns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  gap: 86px;
+}
+
+.footer__head a, .footer__icons a {
+  padding: 0;
+}
+
+.footer__social_icons {
+  display: flex;
+  gap: 12px;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  max-width: 268px;
+  gap: 24px;
+  padding: 0 20px;
+}
+
+.footer h2, h4 {
+  color: var(--gray-10);
+}
+
+.footer h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+.footer__map {
+  max-width: 460px;
+  height: 352px;
+  padding: 0 20px;
+}
+
+.footer__map iframe {
+  border-radius: 4px;
+}
+
+.footer__map img {
+  display: none;
+}
+
+.footer__feedback {
+  max-width: 360px;
+  height: 352px;
+  padding: 0 20px;
+}
+
+.footer__feedback-head {
+  color: var(--gray-10);
+}
+
+.footer__feedback-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+  gap: 28px;
+  margin-top: 30px;
+}
+
+input, 
+textarea {
+  font-size: 18px;
+  color: var(--gray-20);
+  padding: 12px 18px;
+  background: var(--gray-40);
+  border: 1px solid var(--gray-30);
+  border-radius: 4px; 
+}
+
+input[type="submit"] {
+  width: 132px;
+  height: 45px;
+  border: none;
+  background: var(--green-20);
+  color: var(--gray-10);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Buttons and links states */
+.cover__primary:hover, 
+.cover__secondary:hover,
+.catalog__link:hover,
+input[type="submit"]:hover {
+background: var(--green-10);
+}
+
+.header__link:hover,
+.header__bag-link:hover,
+.footer__link-mobile:hover {
+  color: var(--green-10);
+}
+
+.cover__secondary:hover {
+  color: var(--gray-10);
+}
+
+.cover__primary:active, 
+.cover__secondary:active,
+.catalog__link:active,
+input[type="submit"]:active {
+background: var(--green-30);
+}
+
+.header__link:active,
+.header__bag-link:active,
+.footer__link-mobile:active {
+  color: var(--green-30);
+}
+
+/* Form's fields states  */
+input:hover, 
+textarea:hover,
+input:active, 
+textarea:active {
+  border: 1px solid var(--gray-10);
+}
+
+input:valid, 
+textarea:valid {
+  border: 1px solid var(--green-20);
+  color: var(--gray-10);
+}
+
+input:invalid, 
+textarea:invalid {
+  border: 1px solid var(--red-10);
+  color: var(--gray-10);
+}
+
+/* Кнопка Вверх, внизу страницы */
+.scroll-to-top {
+  position: fixed;
+  right: 40px;
+  bottom: 20px;
+  cursor: pointer;
+  z-index: 99;
+  transition: all 0.3s ease-in-out;
+  }
+
+.scroll-to-top img {
+  width: 80px;
+  height: 80px;
+  }
+
+.scroll-to-top:hover {
+  transform: scale(1.1);
+}
+
+/* MEDIA */
+
+@media (max-width: 1280px) {
+  .cover__photo {
+    left: 402px;
+  }
+  .actions__head,
+  .catalog__head,
+  .footer__head {
+    margin-left: 0; /* левый десктопный margin = 140px, здесь обнуляется */
+    text-align: center; /* теперь заголовки выравниваем по центру контейнера */
+  }
+  .actions__cards {
+    grid-template-areas: 
+    "gift"
+    "cachepot"
+    "transplant";
+    grid-template-columns: repeat(auto-fill, minmax(256px, 563px));
+    justify-content: center;
+    row-gap: 36px;
+    column-gap: 0;
+    margin-top: 48px;
+    }
+    .action__card .break__text {
+      display: block;
+    }
+    #action1,
+    #action2,
+    #action3 {
+      padding: 92px 254px 24px 24px; /* padding-right здесь уменьшен */
+      background-repeat: no-repeat;
+    }
+    #action1 {
+      padding-top: 390px; /* но у 1ой карточки верхний отступ оставляем прежним, десктопным */
+    }
+  }
+
+@media (max-width: 1024px) {
+  .cover__photo {
+    left: 484px;
+    }
+  } 
+
+@media (max-width: 912px) {
+  .footer__map iframe {
+    width: 100%;  /* вписывает iframe карты в размер родительского div и т.о. всегда вмещает весь футер в экран */
+    }  
+  } 
+
+@media (max-width: 768px) {
+  .cover {
+    margin-left: 0;
+  }
+  .cover__content {
+    margin-inline: auto;
+  }
+  .cover__head {
+    padding-top: 24px;/* добавил пространство между заголовком и картинкой выше */
+  }
+  .cover__buttons,
+  .footer__social_icons {
+    justify-content: center;
+  }
+  .cover__photo {
+    left: 45.8vw;    /* 352px; от 768px */
+    margin-top: 0;
+  }
+  .action__text,
+  .catalog__text {
+    text-align: left;
+  }
+  .footer h4, p {
+    text-align: center;
+  }
+  .scroll-to-top img {
+    width: 40px;
+    height: 40px;
+  }
+  .scroll-to-top {
+    right: 5px;
+  }
+  }
+
+@media (max-width: 540px) {
+.header__nav {
+  display: none;
+}
+.header,
+.footer__mobile {
+  position: fixed;
+  width: 100vw;
+}
+.header {
+  top: 0;
+}
+.footer__mobile {
+  bottom: 0;
+  display: flex;
+  background: #fff;
+  margin-bottom: 10px;
+}
+.cover__head {
+  text-align: center;
+}
+.cover__photo {
+  left: 44.4vw;  /* 240px; от 540px */
+}
+.action__card .break__text {
+  display: inline;
+  /* вновь вернул span в строчный, чтобы затем делать переносы в тексте, с помощью увеличения padding-right в карточках */
+}
+#action1 {
+  background: url(images/action1-540.png);
+  padding: 220px 160px 24px 24px;
+}
+#action2 {
+  background: url(images/action2-540.png);
+  padding: 24px 172px 24px 24px;
+}
+#action3 {
+  background: url(images/action3-540.png);
+  padding: 24px 172px 24px 24px;
+}
+#action1,
+#action2,
+#action3 {
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+input[type="submit"] {
+  margin-inline: auto;
+}
+.scroll-to-top {
+  right: 0;
+  bottom: 80px; /* кнопку поднимаем выше, чтобы она не закрывала собой мобильное меню */
+}
+}
+
+@media (max-width: 380px) {
+  .cover__head {
+    font-size: 40px;
+  }
+  .cover__text {
+    text-align: center;
+    margin-bottom: 42px;
+    padding: 0;
+  }
+  .cover__head,
+  .cover__text {
+    padding-inline: 14px;
+  }
+  .cover__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cover__photo {
+    left: 39.5%;     /* 150px; */
+  }
+  .catalog__cards, 
+  .actions__cards, 
+  .footer__columns {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .catalog__cards {
+    align-content: center;
+  }
+  .catalog__head, 
+  .actions__head, 
+  .footer__head {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+  #action1 {
+    background: url(images/action1-360.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    max-height: 230px;   /* карточка становится уже по вертикали и теперь равна десктопной высоте двух других */
+    padding: 234px 20px 24px 24px;
+  }
+  #action2 {
+    background: url(images/action2-360.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 24px 158px 24px 24px;
+  }
+  #action3 {
+    background: url(images/action3-360.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 24px 106px 24px 24px;
+  }
+  .footer__contacts {
+    margin-inline: auto;
+  }
+  }
+  
+  /* Outline для технических целей */
+  main, 
+  .header,
+  .footer__mobile,
+  .cover, 
+  .catalog, 
+  .actions, 
+  .footer, 
+  .actions__cards,
+  .action__card {
+    /* outline: 1px dashed var(--gray-40); */
+  }
